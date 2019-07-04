@@ -1,0 +1,20 @@
+.form-inline{
+  padding-left: 90%;
+}
+
+.navbar-brand-name{
+font-size: 200%;
+font-family: 'Dekko';
+}
+
+.navbar{
+background-color:rgb(174, 222, 247);
+border-color:rgb(174, 222, 247);
+}
+
+.button4 {
+  background-color:#89CDF5;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
