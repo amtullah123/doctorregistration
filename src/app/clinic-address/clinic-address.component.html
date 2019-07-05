@@ -1,0 +1,81 @@
+<form data-toggle="validator" role="form">
+        <div class="container">
+        <form class="form-horizontal" role="form">
+            <h2>Clinic Address</h2>
+
+            <div class="form-group">
+                <div class="text-center">
+                  <img id="output" src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                  <input type="file" accept="image/*" onchange="loadFile(event)" class="text-center center-block file-upload">
+                </div>
+            </div>   
+            <div class="form-group">
+                <label for="clinicName" class="col-sm-3 control-label">Clinic Name*</label>
+                <div class="col-sm-9">
+                    <input type="text" id="clinicName" placeholder="Clinic Name" class="form-control" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="state" class="col-sm-3 control-label">State</label>
+                
+                <div class="col-sm-9">
+                        <select id="inputState" class="form-control">
+                                <option selected=""> Choose</option>
+                                  <option>Andhra Pradesh</option>
+                                  <option>Telangana</option>
+                                  <option>Uttar Pradesh</option>
+                                  <option>Madhya Pradesh</option>
+                                  <option>Rajasthan</option>
+                              </select>
+                </div>
+            </div>
+                      
+        
+
+            <div class="form-group">
+              <label for="city" class="col-sm-3 control-label">City</label>
+              <div class="col-sm-9">
+                  <input type="city" id="city" placeholder="City" class="form-control" required>
+              </div>
+          </div>
+         
+            <div class="form-group">
+              <label for="area" class="col-sm-3 control-label">Area</label>
+              <div class="col-sm-9">
+                  <input type="area" id="area" placeholder="Area" class="form-control" required>
+              </div>
+          </div>
+          <div class="form-group">
+                <label for="pincode" class="col-sm-3 control-label">Pincode</label>
+                <div class="col-sm-9">
+                    <input type="number" id="pincode" placeholder="Pincode" class="form-control" required>
+                </div>
+            </div>
+
+             
+      <br/>
+            
+            <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Next</button>
+                </div>
+      
+              <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">Prev</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                      </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+      
+        </form> 
+      </div> 
+      </form>

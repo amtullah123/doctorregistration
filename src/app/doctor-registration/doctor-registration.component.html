@@ -1,16 +1,34 @@
-<div class="container">
+<form data-toggle="validator" role="form">
+  <div class="container">
+    
   <form class="form-horizontal" role="form">
       <h2>Registration</h2>
+  
+                     
+        <div class="form-group">
+          <div class="text-center">
+            <img id="output" src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+            <input type="file" accept="image/*" onchange="loadFile(event)" class="text-center center-block file-upload">
+          </div>
+      </div>   
+      
+      
+
+
+
+          
+
       <div class="form-group">
-          <label for="firstName" class="col-sm-3 control-label">First Name</label>
+          <label for="firstName" class="col-sm-3 control-label">First Name*</label>
           <div class="col-sm-9">
-              <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>
+              <input type="text" id="firstName" placeholder="First Name" class="form-control" required>
           </div>
       </div>
+      
       <div class="form-group">
-          <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+          <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
           <div class="col-sm-9">
-              <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>
+              <input type="text" id="lastName" placeholder="Last Name" class="form-control" required>
           </div>
       </div>
       <div class="form-group">
@@ -19,7 +37,7 @@
               <div class="row">
                   <div class="col-sm-4">
                       <label class="radio-inline">
-                          <input type="radio" id="femaleRadio" value="Female">Female
+                          <input type="radio" id="femaleRadio" value="Female" >Female
                       </label>
                   </div>
                   <div class="col-sm-4">
@@ -31,57 +49,202 @@
           </div>   
       </div> 
       <div class="form-group">
-        <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
+        <label for="phoneNumber" class="col-sm-3 control-label">Phone number*</label>
         <div class="col-sm-9">
-            <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control">
+            <input type="number" id="phoneNumber" placeholder="Phone number" class="form-control" required>
         </div>
     </div>
    
       <div class="form-group">
         <label for="medicalLicense" class="col-sm-3 control-label">Medical License*</label>
         <div class="col-sm-9">
-            <input type="medicalLicense" id="medicalLicense" placeholder="medical license" class="form-control">
+            <input type="medicalLicense" id="medicalLicense" placeholder="medical license" class="form-control" required>
         </div>
     </div>
     <div class="form-group">
-      <label for="birthDate" class="col-sm-3 control-label">Practise started date*</label>
+      <label for="psDate" class="col-sm-3 control-label">Practise started date</label>
       <div class="col-sm-9">
-          <input type="date" id="birthDate" class="form-control">
+          <input type="date" id="psDate" class="form-control" required>
       </div>
   </div>
   
-      <div class="form-group">
-          <label for="email" class="col-sm-3 control-label">Email* </label>
-          <div class="col-sm-9">
-              <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
-          </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-sm-3 control-label">Email*</label>
+      <div class="col-sm-9">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
       </div>
-      <div class="form-group">
-          <label for="password" class="col-sm-3 control-label">Password*</label>
-          <div class="col-sm-9">
-              <input type="password" id="password" placeholder="Password" class="form-control">
-          </div>
-        </div>   
+      <div class="help-block with-errors"></div>
+    </div>
+     
 
+    <div class="form-group">
+    <label for="inputPassword" class="col-sm-3 control-label">Password*</label>
+    <div class="col-sm-9">
+            <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+        </div>
+            <div class="help-block with-errors"></div>
+    </div>
 
-        <div class="form-group">
-            <label for="file-upload" class="col-sm-3 control-label">Upload File*</label>
-            <div class="col-sm-9">
-                <input id="file-upload1" type="file"/>
-            </div>
-          </div>   
-       
-        
-       
+     
 
-
-
-        <!-- /.form-group -->
       <div class="form-group">
           <div class="col-sm-9 col-sm-offset-3">
               <span class="help-block">*Required fields</span>
           </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Register</button>
-  </form> <!-- /form -->
-</div> <!-- ./container -->
+      <div class="form-group">
+       <button type="submit" class="btn btn-primary" (click)="gotoSpecialization()">Next</button>
+           
+          </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Prev</a>
+              </li>
+              <li class="page-item active">
+                  <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+  </form> 
+</div> 
+</form>
+
+<!-- 
+<body>
+
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-lg-8 col-lg-offset-2">
+
+          <form id="contact-form" method="post" action="contact.php" role="form">
+  
+          <div class="messages"></div>
+  
+          <div class="controls">
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_name">Firstname *</label>
+                  <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_lastname">Lastname *</label>
+                  <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_email">Email *</label>
+                  <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                  <span class="help-block">Please enter a valid email address</span>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_phone">Phone</label>
+                  <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="form_message">Message *</label>
+                  <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+              </div>
+            </div>
+          </div>
+  
+          </form>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </body> -->
+
+
+
+  <!-- <form data-toggle="validator" role="form">
+    <div class="form-group">
+      <label for="inputName" class="control-label">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+    </div>
+    <div class="form-group has-feedback">
+      <label for="inputTwitter" class="control-label">Twitter</label>
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
+      </div>
+      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="control-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+      <div class="help-block with-errors"></div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="control-label">Password</label>
+      <div class="form-inline row">
+        <div class="form-group col-sm-6">
+          <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+          <div class="help-block">Minimum of 6 characters</div>
+        </div>
+        <div class="form-group col-sm-6">
+          <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="radio">
+        <label>
+          <input type="radio" name="underwear" required>
+          Boxers
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="underwear" required>
+          Briefs
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+          Check yourself
+        </label>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form> -->

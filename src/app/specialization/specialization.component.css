@@ -1,0 +1,80 @@
+/* #inventory .card:hover {
+    transition: all 0.3s ease;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+  
+}
+
+
+#inventory .view-btn {
+    background-color: #e6de08;
+    margin: -25px 0 0 0;
+    border-radius: 0 0 0 0;
+    font-size: 14px;
+    border: #e6de08;
+    color: #000;
+
+}
+
+
+    #inventory .btn:hover {
+        background-color: #ff4444;
+        color: #fff;
+        border: 2px solid #ff4444;
+        transition: all 0.3s ease;
+        box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    }
+
+
+    .sub-heading{
+        padding-left: 45%;
+        font-weight: 600;
+font-family: 'Dekko';
+    } */
+
+
+
+    .image-grid-cover {
+        width: 100%;
+        background-size: cover;
+        min-height: 180px;
+        position: relative;
+        margin-bottom: 30px;
+        text-shadow: rgba(0,0,0,.8) 0 1px 0;
+        border-radius: 4px;
+    }
+    .image-grid-clickbox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        background: rgba(0,0,0,.45);
+    }
+    .cover-wrapper {
+        font-size: 18px;
+        text-align: center;
+        display: block;
+        color: #fff;
+        text-shadow: rgba(0,0,0,.8) 0 1px 0;
+        z-index: 21;
+        position: relative;
+        top: 80px;
+    }
+    a, a:focus, a:hover {
+        text-decoration: none;
+        outline: 0;
+    }
+
+
+    .container{
+            width: 100%;
+            height: 100%;
+            background: url(/assets/images/heart.jpg) no-repeat center ;
+            background-size: 100% 100%;
+            background-position: top center;
+           
+    }

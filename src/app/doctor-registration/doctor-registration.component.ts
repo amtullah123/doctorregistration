@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { SpecializationComponent } from '../specialization/specialization.component';
 
 @Component({
   selector: 'app-doctor-registration',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorRegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+  gotoSpecialization(){
+    this.router.navigate(['/specialization']);  // define your component where you want to go
+}
 
 }
